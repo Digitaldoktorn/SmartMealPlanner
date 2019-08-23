@@ -30,28 +30,28 @@ const selectSunday = document.getElementById('gridRadios_2_7')
 // fetching user input
 const addMeal = document.forms['myform']
 addMeal.addEventListener('submit', function(e){
-    const value = addMeal.querySelector('#input-food').value;
+    const value = addMeal.querySelector('#input-food').value
 
     if(selectMonday.checked){
-        foodMonday.innerHTML = value;
+        foodMonday.innerHTML = value
     }
     if(selectTuesday.checked){
-        foodTuesday.innerHTML = value;
+        foodTuesday.innerHTML = value
     }
     if(selectWednesday.checked){
-        foodWednesday.innerHTML = value;
+        foodWednesday.innerHTML = value
     }
     if(selectThursday.checked){
-        foodThursday.innerHTML = value;
+        foodThursday.innerHTML = value
     }
     if(selectFriday.checked){
-        foodFriday.innerHTML = value;
+        foodFriday.innerHTML = value
     }
     if(selectSaturday.checked){
-        foodSaturday.innerHTML = value;
+        foodSaturday.innerHTML = value
     }
     if(selectSunday.checked){
-        foodSunday.innerHTML = value;
+        foodSunday.innerHTML = value
     }
     
 })
@@ -59,7 +59,10 @@ addMeal.addEventListener('submit', function(e){
 const addContent = document.forms['myform']
 addContent.addEventListener('submit', function(e){
     e.preventDefault()
-    const value = addContent.querySelector('#input-content').value;
+    const value = addContent.querySelector('#input-content').value
+    const inputFood = document.getElementById('input-food')
+    const inputContent = document.getElementById('input-content')
+        
 
     if(selectMonday.checked){
         foodMonday.nextElementSibling.innerHTML = value
@@ -82,5 +85,7 @@ addContent.addEventListener('submit', function(e){
     if(selectSunday.checked){
         foodSunday.nextElementSibling.innerHTML = value
     }
+    inputFood.value = ''
+    inputContent.value = ''
     
 })
